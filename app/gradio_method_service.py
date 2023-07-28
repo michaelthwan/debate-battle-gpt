@@ -45,7 +45,7 @@ class GradioMethodService:
         return res
 
     @staticmethod
-    def fetch_and_summarize(apikey_textbox, source_textbox, source_target_textbox, qa_textbox, gpt_model_textbox, language_textbox, chatbot, history):
+    def debate(apikey_textbox, source_textbox, source_target_textbox, qa_textbox, gpt_model_textbox, language_textbox, chatbot, history):
         g_inputs = GradioInputs(apikey_textbox, source_textbox, source_target_textbox, qa_textbox, gpt_model_textbox, language_textbox, chatbot, history)
         g_inputs.history = []
         g_inputs.chatbot = []

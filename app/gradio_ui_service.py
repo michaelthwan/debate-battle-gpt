@@ -23,12 +23,12 @@ class GradioUIService:
     @staticmethod
     def get_functions():
         functions = {
-            "Fetch and summarize!": {
+            "Debate": {
                 "function": GradioMethodService.fetch_and_summarize,
             },
-            "Ask": {
-                "function": GradioMethodService.ask_question
-            },
+            ...
+        }
+        return functions
             "Test formatting": {
                 "function": GradioMethodService.test_formatting
             },
@@ -80,7 +80,7 @@ class GradioUIService:
                                 value="en-US", label="Language", info="Choose your language, regardless of video language"
                             )
                     with gr.Row():
-                        functions["Fetch and summarize!"]["btn"] = gr.Button("Fetch and summarize!", variant="primary")
+                        functions["Debate"]["btn"] = gr.Button("Debate", variant="primary")
                     with gr.Row().style(equal_height=True):
                         gr.Markdown(f"Status: ")
                         status_md = gr.Markdown(f"Normal")
